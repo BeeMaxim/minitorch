@@ -37,6 +37,7 @@ class Module:
     def eval(self) -> None:
         "Set the mode of this module and all descendent modules to `eval`."
         # TODO: Implement for Task 0.4.
+        print('test')
         raise NotImplementedError('Need to implement for Task 0.4')
 
     def named_parameters(self) -> Sequence[Tuple[str, Parameter]]:
