@@ -71,7 +71,7 @@ def relu(x: float) -> float:
 
     (See https://en.wikipedia.org/wiki/Rectifier_(neural_networks) .)
     """
-    return x if x > 0 else 0
+    return x if x > 0 else 0.0
 
 
 EPS = 1e-6
@@ -89,8 +89,7 @@ def exp(x: float) -> float:
 
 def log_back(x: float, d: float) -> float:
     r"If $f = log$ as above, compute $d \times f'(x)$"
-    # TODO: Implement for Task 0.1.
-    raise NotImplementedError('Need to implement for Task 0.1')
+    return d / x
 
 
 def inv(x: float) -> float:
@@ -100,8 +99,7 @@ def inv(x: float) -> float:
 
 def inv_back(x: float, d: float) -> float:
     r"If $f(x) = 1/x$ compute $d \times f'(x)$"
-    # TODO: Implement for Task 0.1.
-    raise NotImplementedError('Need to implement for Task 0.1')
+    return -d / x**2
 
 
 def relu_back(x: float, d: float) -> float:
